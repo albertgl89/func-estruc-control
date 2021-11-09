@@ -53,3 +53,20 @@ function comptaTramposParam($numero){
 
 //Test
 comptaTramposParam(20);
+
+echo "<br>";
+echo "<h1> Exercici 4 </h1>";
+
+function comptaTramposParamDef($numero = 10){
+    for ($i = 1; $i < $numero; $i++){
+        $i++;
+        if ($i == $numero || $i == $numero-1){
+            echo $i;
+        } else {
+            echo $i.", ";
+        } 
+    }
+}
+
+//Test
+comptaTramposParamDef();
