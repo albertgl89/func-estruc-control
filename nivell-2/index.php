@@ -40,3 +40,40 @@ echo "Cost de trucada de 2 minuts: ".calculaCost(2)."cts <br>";//Esperat 10
 echo "Cost de trucada de 3 minuts: ".calculaCost(3)."cts <br>";//Esperat 10
 echo "Cost de trucada de 5 minuts: ".calculaCost(5)."cts <br>";//Esperat 20
 echo "Cost de trucada de 6 minuts: ".calculaCost(6)."cts <br>";//Esperat 25
+
+echo "<h1> Exercici 3 </h1>";
+
+function calculaItems($unitats, $item){
+    $preuUnitari;
+    switch ($item){
+        case "xocolata":
+            $preuUnitari = 1.00;
+            break;
+        case "xiclets":
+            $preuUnitari = 0.50;
+            break;
+        case "carmels":
+            $preuUnitari = 1.50;
+            break;
+        default:
+            return "No és un article existent a la botiga.";
+            break;
+    }
+
+    return $unitats * $preuUnitari;
+}
+
+function calculaTotal($subtotals){
+    $total = 0;
+    foreach($subtotals as $item){
+        $total += $item;
+    }
+    return $total;
+}
+
+//Test
+$compra = [calculaItems(2, "xocolata"), calculaItems(1, "xiclets"), calculaItems(1, "carmels")];//Total esperat 4
+echo "El total de la compra és ".calculaTotal($compra)."<br>";
+
+$compra = [calculaItems(1, "xocolata"), calculaItems(4, "xiclets"), calculaItems(2, "carmels")];//Total esperat 6
+echo "El total de la compra és ".calculaTotal($compra)."<br>";
