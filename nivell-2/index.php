@@ -18,3 +18,25 @@ function calculaOlimpiades($inici = 1960, $final = 2016){
 
 //Test
 calculaOlimpiades();
+
+echo "<h1> Exercici 2 </h1>";
+
+function calculaCost($minuts){
+    $cost = 10;
+    
+    if ($minuts < 3){
+        return $cost;
+    }
+
+    for ($i = 1; $i <= $minuts - 3; $i++){
+        $cost+=5;
+    }
+
+    return $cost;
+}
+
+//Test
+echo "Cost de trucada de 2 minuts: ".calculaCost(2)."cts <br>";//Esperat 10
+echo "Cost de trucada de 3 minuts: ".calculaCost(3)."cts <br>";//Esperat 10
+echo "Cost de trucada de 5 minuts: ".calculaCost(5)."cts <br>";//Esperat 20
+echo "Cost de trucada de 6 minuts: ".calculaCost(6)."cts <br>";//Esperat 25
