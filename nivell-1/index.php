@@ -70,3 +70,30 @@ function comptaTramposParamDef($numero = 10){
 
 //Test
 comptaTramposParamDef();
+
+echo "<br>";
+echo "<h1> Exercici 5 </h1>";
+
+function calculaDivisio($nota){
+    if ($nota >= 60){
+        return "Primera Divisió";
+    } else if ($nota >= 45 && $nota <= 59){
+        return "Segona Divisió";
+    } else if ($nota >= 33 && $nota <= 44){
+        return "Tercera Divisió";
+    } else {
+        return "Reprovar";
+    }
+}
+
+//Test
+echo calculaDivisio(65)."<br>";//Esperat: "Primera Divisió" x2
+echo calculaDivisio(60)."<br>";
+echo calculaDivisio(45)."<br>";//Esperat "Segona Divisió" x3
+echo calculaDivisio(53)."<br>";
+echo calculaDivisio(59)."<br>";
+echo calculaDivisio(33)."<br>";//Esperat "Tercera Divisió" x3
+echo calculaDivisio(44)."<br>";
+echo calculaDivisio(38)."<br>";
+echo calculaDivisio(32)."<br>";//Esperat "Reprovar" x2
+echo calculaDivisio(25)."<br>";
