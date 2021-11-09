@@ -97,3 +97,16 @@ echo calculaDivisio(44)."<br>";
 echo calculaDivisio(38)."<br>";
 echo calculaDivisio(32)."<br>";//Esperat "Reprovar" x2
 echo calculaDivisio(25)."<br>";
+
+echo "<h1> Exercici 6 </h1>";
+
+function isBitten(){
+    $mossega = rand(0,1);
+    return $mossega == 0?  false : true;
+}
+
+//Test
+echo isBitten()? "No mossegat. <br>" : "Mossegat! <br>";
+echo isBitten()? "No mossegat. <br>" : "Mossegat! <br>";
+echo isBitten()? "No mossegat. <br>" : "Mossegat! <br>";
+echo isBitten()? "No mossegat. <br>" : "Mossegat! <br>";
